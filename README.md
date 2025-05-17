@@ -1,25 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+** DockerRailsTodo **
+This project contains a Dockerized Ruby on Rails To-Do application with PostgreSQL as the database.
 
-Things you may want to cover:
+Rails app and PostgreSQL run in separate Docker containers.
 
-* Ruby version
+Uses a Dockerfile to build the Rails app image.
 
-* System dependencies
+Containers are connected to enable communication between app and DB.
 
-* Configuration
+Simple setup for running a Rails app with a PostgreSQL backend using Docker.
 
-* Database creation
+** How to run ** 
+Build the Rails app Docker image:
+docker build -t dockerrailstodo .
 
-* Database initialization
+Run PostgreSQL container:
+docker run --name pg-todo -e POSTGRES_PASSWORD=your_password -d postgres
 
-* How to run the test suite
+Run Rails app container linked to PostgreSQL:
+docker run --name rails-todo --link pg-todo:postgres -p 3000:3000 -d dockerrailstodo
 
-* Services (job queues, cache servers, search engines, etc.)
+Access the app at http://localhost:3000
 
-* Deployment instructions
 
   
 
