@@ -21,7 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+  
 
 
 https://github.com/user-attachments/assets/f14c425c-9465-4702-8389-dbaedc675f25
